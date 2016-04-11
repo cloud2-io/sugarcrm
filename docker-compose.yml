@@ -1,0 +1,29 @@
+sugarcrm:
+  image: ahunyady/sugarcrm
+  container_name: sugarcrm
+  ports:
+    - "2080:80"
+  volumes:
+    - /var/www/html
+  links:
+    - "db"
+  environment:
+    DB_TYPE: mysql
+    DB_TCP_PORT: 3306
+    DB_MANAGER: MysqlManager
+    DB_HOST_NAME: mysql
+    DB_USER_NAME: sugarcrm
+    DB_PASSWORD: sugarcrm
+    DATABASE_NAME: sugarcrm 
+    
+db:
+  image: mysql
+  container_name: mysql
+  volumes:
+    - /var/lib/mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: sugarcrm
+    MYSQL_USER: sugarcrm
+    MYSQL_PASSWORD: sugarcrm
+  mem_limit: 1024m
