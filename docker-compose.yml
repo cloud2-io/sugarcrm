@@ -1,5 +1,5 @@
 sugarcrm:
-  image: ahunyady/sugarcrm
+  image: cloud2/sugarcrm
   container_name: sugarcrm
   ports:
     - "2080:80"
