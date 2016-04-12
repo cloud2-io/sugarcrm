@@ -12,9 +12,9 @@ sugarcrm:
     DB_TCP_PORT: 3306
     DB_MANAGER: MysqlManager
     DB_HOST_NAME: mysql
-    DATABASE_NAME: sugarcrm 
     DB_USER_NAME: sugarcrm
     DB_PASSWORD: gQ8GLq761jfp
+    DATABASE_NAME: sugarcrm 
     
 db:
   image: mysql
